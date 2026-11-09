@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Tip Calculator</h1>
+    </header>
+    <div class="calculator">
+      <section class="input-section">
+        <div class="field">
+          <label for="bill">Bill amount</label>
+          <div class="input-wrap">
+            <span class="prefix">$</span>
+            <input type="number" id="bill" value="50.00" min="0" step="0.01">
+          </div>
+        </div>
+        <div class="field">
+          <label>Select tip</label>
+          <div class="tip-grid">
+            <button type="button" class="btn-tip" data-tip="5">5%</button>
+            <button type="button" class="btn-tip" data-tip="10">10%</button>
+            <button type="button" class="btn-tip active" data-tip="15">15%</button>
+            <button type="button" class="btn-tip" data-tip="18">18%</button>
+            <button type="button" class="btn-tip" data-tip="20">20%</button>
+            <button type="button" class="btn-tip" data-tip="25">25%</button>
+          </div>
+          <div class="input-wrap custom-tip-wrap">
+            <input type="number" id="custom-tip" placeholder="Custom tip %" min="0" step="1">
+          </div>
+        </div>
+        <div class="field">
+          <label for="split">Split among people</label>
+          <div class="split-control">
+            <button type="button" id="split-minus">-</button>
+            <input type="number" id="split" value="1" min="1" step="1">
+            <button type="button" id="split-plus">+</button>
+          </div>
+        </div>
+      </section>
+      <section class="result-section">
+        <div class="result-card">
+          <div class="result-row">
+            <span class="label">Tip amount</span>
+            <span class="value" id="res-tip">$7.50</span>
+          </div>
+          <div class="result-row">
+            <span class="label">Total per person</span>
+            <span class="value total-value" id="res-total-person">$57.50</span>
+          </div>
+          <div class="result-row secondary">
+            <span class="label">Total bill</span>
+            <span class="value" id="res-total">$57.50</span>
+          </div>
+        </div>
+        <button type="button" id="reset-btn" class="btn-reset">Reset</button>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
